@@ -1,8 +1,7 @@
-class Solution {
-public:
+// DP SOLUTION --------------------------------------------------------
 
-    // DP SOLUTION
-    
+class Solution {
+public:    
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         int n = nums.size();
         vector<int> left(n); vector<int> right(n);
@@ -37,5 +36,29 @@ public:
             output.push_back(out);
         }
         return output;
+    }
+};
+
+
+
+
+// HEAP SOLUTION -----------------------------------------------------
+
+class Solution {
+public:    
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+       priority_queue<pair<int,int>> heap;
+        vector<int> ans;
+        
+        for(int i=0; i<nums.size(); i++) {
+            while(!heap.empty() && heap.top().second <= (i-k)) {
+                heap.pop();
+            }
+                heap.push(make_pair(nums[i], i));
+                if(i >= k-1) {
+                    ans.push_back(heap.top().first);
+                }                       
+        }
+        return ans;
     }
 };
