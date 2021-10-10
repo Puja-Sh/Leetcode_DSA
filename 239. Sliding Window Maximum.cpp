@@ -62,3 +62,34 @@ public:
         return ans;
     }
 };
+
+
+
+
+
+// DEQUE SOLUTION -----------------------------------------------------
+
+class Solution {
+public:   
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+       deque<int> dq;
+        vector<int> res;
+        
+        for(int i=0; i<nums.size(); i++){
+            // If going out of range pop from front
+            if(!dq.empty() && dq.front() == i-k) dq.pop_front();
+            
+            // If found greater element pop all from the back
+            while( !dq.empty() && nums[dq.back()] < nums[i]) {
+                dq.pop_back();
+            }           
+            
+            // If element is lesser or not going out of range at it
+            dq.push_back(i);
+            
+            // after k operation add front to ans 
+            if(i >= k-1) res.push_back(nums[dq.front()]);
+        }
+        return res;
+    }
+};
