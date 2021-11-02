@@ -7,8 +7,8 @@ public:
         
         sort(nums.begin(), nums.end());
         
-        for(int i=0; i<n; i++){
-            for(int j = i+1; j<n; j++){
+        for(int i=0; i<n-3; i++){
+            for(int j = i+1; j<n-2; j++){
                 // a+b+c+d = target
                 // c+d = target - a-b
                 int target_2 = target - nums[i] - nums[j];
