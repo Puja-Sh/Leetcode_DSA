@@ -1,0 +1,1 @@
+[discuss](https://leetcode.com/problems/summary-ranges/discuss/63284/10-line-c%2B%2B-easy-understand)
