@@ -1,0 +1,1 @@
+[Discuss](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/discuss/1794292/stack-oror-c%2B%2Boror-interview-answer-type-oror-no-STL-oror-easy-to-understand-oror-cpp-c%2B%2B-oror)
