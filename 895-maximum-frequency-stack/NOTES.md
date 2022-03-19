@@ -1,0 +1,1 @@
+[Discuss](https://leetcode.com/problems/maximum-frequency-stack/discuss/1861911/C%2B%2B-or-Easy-solution-with-explanation-or-Simple-solution)
