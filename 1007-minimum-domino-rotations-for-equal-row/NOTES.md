@@ -1,0 +1,1 @@
+[Discuss](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/discuss/1865373/C%2B%2B-oror-2-Approaches-oror-Explained-With-Algorithm-oror-Easy-and-Simple)
