@@ -1,19 +1,26 @@
 class Solution {
 public:
+    // Boyer-Moore Voting Algorithm
+    // TC- O(N)
+    // SC- O(1)
+    
     int majorityElement(vector<int>& nums) {
-        map<int,int> m;
+        int majority=-1, count=0;
         
-        for(int i=0; i<nums.size(); i++){
-            m[nums[i]]++;
-        }
-        
-        int res=0, freq=INT_MIN;
-        for(auto x:m){
-            if(x.second > freq){
-                res = x.first;
-                freq = x.second;
+        for(auto x: nums){
+            if(count == 0){
+                majority = x;
+                count++;
+                continue;
+            }
+            
+            if(x == majority){
+                count++;
+            }else {
+                count--;
             }
         }
-        return res;
+        
+        return majority;
     }
 };
