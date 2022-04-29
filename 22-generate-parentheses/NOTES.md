@@ -1,0 +1,1 @@
+[Discuss](https://leetcode.com/problems/generate-parentheses/discuss/10105/Concise-recursive-C%2B%2B-solution)
