@@ -1,0 +1,1 @@
+[Discuss](https://leetcode.com/problems/match-substring-after-replacement/discuss/2138847/C%2B%2B-oror-HashMap)
