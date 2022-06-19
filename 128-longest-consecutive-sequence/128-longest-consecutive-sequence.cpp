@@ -5,21 +5,20 @@ public:
         
         if(n == 0) return 0;
         
-        sort(nums.begin(), nums.end());
+        set<int> nums_set(nums.begin(), nums.end());
         
-        int count=0, ans=INT_MIN;
+        int count = 1, ans = INT_MIN;
         
-        for(int i=1; i<n; i++){
-            if(nums[i] == nums[i-1]+1){
+        for(int el : nums_set){
+            int curr = el;
+            if(nums_set.find(curr+1) != nums_set.end()){
                 count++;
-            } else if(nums[i] == nums[i-1]){
-                continue;
             } else {
-                count=0;
+                ans = max(ans, count);
+                count = 1;
             }
-            ans = max(ans, count);
         }
         
-        return ans == INT_MIN? 1 : ans+1;
+        return ans;
     }
 };
